@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SearchActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueColor">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <AutoCompleteTextView
+                    android:textSize="16sp"
+                    android:id="@+id/completeText_search"
+                    android:layout_width="235dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="18dp"
+                    android:background="#fff"
+                    android:hint="Search for your product..."
+                    android:maxLines="1"
+                    android:paddingLeft="10dp" />
+
+                <ImageView
+                    android:id="@+id/imageView_refresh_search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_refresh_white"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!---->
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Search result:"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <FrameLayout
+        android:layout_width="356dp"
+        android:layout_height="511dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView36">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_result_search"
+            android:layout_width="336dp"
+            android:layout_height="514dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="12dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:theme="@style/AppTheme.Blue"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

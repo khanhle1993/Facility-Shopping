@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrain_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailProductActivity">
+
+    <TextView
+        android:id="@+id/textView_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:text="Next"
+        android:textColor="@color/dialogButtonColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar_detail_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueColor">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detail Product"
+                    android:textColor="#FFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imageView_detail_product"
+        android:layout_width="243dp"
+        android:layout_height="183dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/textView_prev"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Product name:"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_pname"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/textView7"
+            android:text="TextView"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_pname"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Price:"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_price"
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_pname"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/textView10"
+            android:text="TextView"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_price"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Description:"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="359dp"
+            android:layout_height="176dp"
+            android:layout_below="@+id/textView12"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_description"
+                    android:layout_width="327dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="TextView"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="159dp"
+                    tools:layout_editor_absoluteY="370dp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="109dp"
+        android:text="Prev"
+        android:textColor="@color/dialogButtonColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+
+    <Button
+        android:id="@+id/button_add_to_cart"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/redColor"
+        android:text="Add to cart"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="291dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

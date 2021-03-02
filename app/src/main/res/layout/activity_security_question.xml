@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SecurityQuestionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar_security_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueColor">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Security Question"
+                    android:textColor="#FFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="559dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Set up the following 2 security questions to recover your password when you forget it"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView21"
+            android:layout_margin="16dp"
+            android:text="1. What is your favorite food ?"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editText_securityQuestion_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView22"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_securityQuestion_1"
+            android:layout_margin="16dp"
+            android:text="2. What is your favorite color ?"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editText_securityQuestion_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView23"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+        <Button
+            android:id="@+id/button_save_securityQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="23dp"
+            android:background="@color/greyColor"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

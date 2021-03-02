@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrain_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity">
+
+    <TextView
+        android:id="@+id/textView_create_newAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Create new account"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_forgot_pass" />
+
+    <Button
+        android:id="@+id/button_login_login"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="31dp"
+        android:background="@color/greyColor"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_remember" />
+
+    <EditText
+        android:id="@+id/editText_phone_login"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/custom_edittext2"
+        android:ems="10"
+        android:hint="Phone number..."
+        android:inputType="phone"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="266dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="36dp"
+        android:background="#FAFAFA"
+        android:src="@drawable/logo_facility_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fb_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="420dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_fb_signin"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginBottom="8dp"
+        android:background="#3B5998"
+        android:text="Sign in with Facebook"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_google_signin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_google_signin"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginBottom="41dp"
+        android:background="@drawable/googlebutton"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/google"
+        android:layout_width="192dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_pass_login"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/custom_edittext2"
+        android:ems="10"
+        android:hint="Password..."
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_phone_login" />
+
+    <CheckBox
+        android:checked="false"
+        android:id="@+id/checkBox_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="19dp"
+        android:button="@drawable/custom_checkbox"
+        android:padding="10dp"
+        android:text="Remember"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_pass_login" />
+
+    <TextView
+        android:id="@+id/textView_forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Forgot Password ?"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_pass_login" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="Or"
+        android:textColor="#000"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_fb_signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

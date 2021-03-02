@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ProductByCategoryActivity"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar_product_by_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blueColor"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView_caidat_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product"
+                        android:textColor="#FFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_layout_2"
+        android:layout_below="@id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="9dp"
+                    android:text="Filter products"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/img_search_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/img_refresh_filter"
+                    android:src="@drawable/ic_search_filter"
+                    />
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/img_refresh_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_toLeftOf="@+id/toggle_dropdown_filter"
+                    android:src="@drawable/ic_refresh_filter"
+                    />
+
+                <ToggleButton
+                    android:layout_marginRight="4dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/toggle_dropdown_filter"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/toggle_dropdown"
+                    android:checked="false"
+                    android:stateListAnimator="@null"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/relative2"
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/rdg_filter"
+                    android:layout_width="115dp"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="15dp"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rdButton_selling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selling" />
+
+                    <RadioButton
+                        android:id="@+id/rdButton_promotion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rdButton_selling"
+                        android:text="Promotion" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_toRightOf="@+id/rdg_filter"
+                    android:id="@+id/rdg_filter_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="15dp"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rdButton_latest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Latest" />
+
+                    <RadioButton
+                        android:id="@+id/rdButton_installment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Installment" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative3"
+                android:id="@+id/relative4">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="35dp"
+                        android:id="@+id/text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="By price range:"
+                        android:textColor="#000"/>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_spinner"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="135dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:background="@drawable/custom_spinner"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinner_price_filter"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:src="@drawable/toggle_dropdown" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/relative4"
+                android:id="@+id/relative5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_pname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Product name"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic" />
+
+
+                <FrameLayout
+                    android:layout_below="@+id/text_pname"
+                    android:layout_margin="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_product_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                    <ProgressBar
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:id="@+id/progressBar2"
+                        style="?android:attr/progressBarStyle"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:theme="@style/AppTheme.Blue"
+                        android:layout_height="wrap_content" />
+
+                </FrameLayout>
+
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

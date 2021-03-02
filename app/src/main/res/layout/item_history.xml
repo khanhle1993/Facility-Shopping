@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:cardCornerRadius="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_dateOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Date Order"
+                android:textColor="#009688"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_num_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_dateOrder"
+                android:layout_margin="10dp"
+                android:text="Number order: #1"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_num_order"
+                android:layout_margin="10dp"
+                android:text="Total amount:"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_total_amount_history"
+                android:text="500 $"
+                android:textColor="#ff00"
+                android:layout_toRightOf="@+id/textView24"
+                android:layout_below="@+id/textView_num_order"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/textView_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Not confirm"
+                android:textColor="#f58231"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/button_view_detail_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_num_order"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#009688"
+                android:text="View detail"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RegisterActivity">
+
+    <Button
+        android:id="@+id/button_register_regis"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/blueColor"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="266dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="36dp"
+        android:background="#FAFAFA"
+        android:src="@drawable/logo_facility_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Register new account"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editText_fullname_regis"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="Full name..."
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editText_phone_regis"
+        android:layout_width="339dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="Phone number (Like as +84...)"
+        android:inputType="phone"
+        android:paddingLeft="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_fullname_regis" />
+
+    <EditText
+        android:id="@+id/editText_pass_regis"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="Password..."
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email_regis" />
+
+    <EditText
+        android:id="@+id/editText_email_regis"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="Email..."
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_phone_regis" />
+
+    <EditText
+        android:id="@+id/editText_retypePass_regis"
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="Retype password..."
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_pass_regis" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

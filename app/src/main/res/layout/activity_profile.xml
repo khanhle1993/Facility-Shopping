@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueColor">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="#FFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView_save_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_check" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView_user_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <ImageView
+        android:id="@+id/imageView_edit_image_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="209dp"
+        android:layout_marginRight="209dp"
+        android:src="@drawable/ic_create_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_user_profile"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <RelativeLayout
+        android:layout_width="359dp"
+        android:layout_height="433dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_user_profile">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:text="Full name"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:textStyle="italic"
+            android:textColor="@color/greyColor"
+            android:id="@+id/editText_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView13"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_fullName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Phone number"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:enabled="false"
+            android:inputType="phone"
+            android:textStyle="italic"
+            android:textColor="@color/greyColor"
+            android:id="@+id/editText_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView14"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_phoneNumber"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Password"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editText_password_profile"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView15"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp"
+            android:inputType="textPassword"
+            android:textColor="@color/greyColor"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/imageView_edit_password_profile"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView15"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:layout_toRightOf="@+id/editText_password_profile"
+            android:src="@drawable/ic_create_grey" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_password_profile"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Email"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:textStyle="italic"
+            android:textColor="@color/greyColor"
+            android:id="@+id/editText_email_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView16"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:id="@+id/textView_setup_securityQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_email_profile"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Set up security questions"
+            android:textColor="@color/blueColor"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

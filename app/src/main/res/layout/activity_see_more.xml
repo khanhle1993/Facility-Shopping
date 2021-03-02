@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SeeMoreActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar_seemore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueColor">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView_seemore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product"
+                    android:textColor="#FFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_layout_3"
+        android:layout_width="357dp"
+        android:layout_height="565dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_title_seemore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="17dp"
+                android:text="List products ptype"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_seemore"
+                android:layout_width="match_parent"
+                android:layout_height="491dp"
+                android:layout_below="@+id/textView_title_seemore"
+                android:layout_marginTop="17dp"
+                android:padding="16dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

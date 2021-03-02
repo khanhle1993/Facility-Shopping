@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blueColor</item>
+        <item name="colorPrimaryDark">@color/blueColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--Custom progress color for Progress Dialog-->
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/dialogColor</item>
+    </style>
+
+    <!--Custom progress bar color-->
+    <style name="AppTheme.Blue" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/blueColor</item>
+    </style>
+
+    <!--Dialog button color-->
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/dialogButtonColor</item>
+    </style>
+
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+    </style>
+</resources>
